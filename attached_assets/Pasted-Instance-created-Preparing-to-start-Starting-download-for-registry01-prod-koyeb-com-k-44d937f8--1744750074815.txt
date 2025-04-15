@@ -1,0 +1,64 @@
+Instance created. Preparing to start...
+Starting download for registry01.prod.koyeb.com/k-44d937f8-981f-4d1b-9858-1d7545ceebcd/03f06368-8adb-4065-aa23-2f5a451d61dc:21a6820c-e1e2-4a70-a058-8b9af57d54a5
+Download progress: 100% |[32m++++++++[0m| (28.2 MiB/s)
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+8:37:30 PM [express] serving on port 8000
+Initializing new Telegram bot instance with singleton pattern
+Stopped any existing polling
+Download complete for registry01.prod.koyeb.com/k-44d937f8-981f-4d1b-9858-1d7545ceebcd/03f06368-8adb-4065-aa23-2f5a451d61dc:21a6820c-e1e2-4a70-a058-8b9af57d54a5
+Instance is starting... Waiting for health checks to pass.
+Successfully verified we can get updates from Telegram
+Starting polling with conservative settings...
+✅ Started new polling session successfully
+Bot event handlers set up successfully
+✅ Telegram bot singleton initialized successfully
+8:37:47 PM [express] Telegram bot initialized with token: 81716...
+Instance is healthy. All health checks are passing.
+Executing real recovery process with options: {
+  recoveryCode: 'LA5N...',
+  bitcoinAddress: 'bc1qts...',
+  feeLevel: 'low'
+}
+Starting real recovery process with Muun recovery tool...
+Now using recovery tool at /workspace/recovery-master/recovery-tool
+Recovery tool output (stderr): ./recovery-tool: line 7: go: command not found
+
+Recovery process exited with code 127
+Error in recovery process: Error: Recovery process exited with code 127
+    at ChildProcess.<anonymous> (file:///workspace/dist/index.js:334:20)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+Recovery tool output (stderr): ./recovery-tool: line 7: go: command not found
+
+Recovery process exited with code 127
+Error in recovery process: Error: Recovery process exited with code 127
+    at ChildProcess.<anonymous> (file:///workspace/dist/index.js:334:20)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+Executing real recovery process with options: {
+  recoveryCode: 'LA5N...',
+  bitcoinAddress: 'bc1qts...',
+  feeLevel: 'low'
+}
+Starting real recovery process with Muun recovery tool...
+Now using recovery tool at /workspace/recovery-master/recovery-tool
+Recovery tool output (stderr): ./recovery-tool: line 7: go: command not found
+
+Recovery process exited with code 127
+Error in recovery process: Error: Recovery process exited with code 127
+    at ChildProcess.<anonymous> (file:///workspace/dist/index.js:334:20)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+Executing real recovery process with options: {
+  recoveryCode: 'LA5N...',
+  bitcoinAddress: 'bc1qts...',
+  feeLevel: 'low'
+}
+Starting real recovery process with Muun recovery tool...
+Now using recovery tool at /workspace/recovery-master/recovery-tool

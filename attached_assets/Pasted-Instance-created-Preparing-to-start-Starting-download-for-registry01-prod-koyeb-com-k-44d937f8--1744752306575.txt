@@ -1,0 +1,54 @@
+Instance created. Preparing to start...
+Starting download for registry01.prod.koyeb.com/k-44d937f8-981f-4d1b-9858-1d7545ceebcd/03f06368-8adb-4065-aa23-2f5a451d61dc:f4032ac2-817d-4aba-9660-fa07a4fc59f2
+Download progress: 100% |[32m++++++++[0m| (28.3 MiB/s)
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+Download complete for registry01.prod.koyeb.com/k-44d937f8-981f-4d1b-9858-1d7545ceebcd/03f06368-8adb-4065-aa23-2f5a451d61dc:f4032ac2-817d-4aba-9660-fa07a4fc59f2
+Instance is starting... Waiting for health checks to pass.
+9:22:01 PM [express] serving on port 8000
+Initializing new Telegram bot instance with singleton pattern
+Stopped any existing polling
+⚠️ Detected another polling instance. Waiting 10 seconds before trying again...
+Sent offset request to try to clear other polling sessions
+Starting polling with conservative settings...
+✅ Started new polling session successfully
+Bot event handlers set up successfully
+✅ Telegram bot singleton initialized successfully
+9:22:29 PM [express] Telegram bot initialized with token: 81716...
+Instance is healthy. All health checks are passing.
+Telegram polling error: ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+⚠️ Conflict detected in running bot - will attempt to reset the connection
+Stopped our current polling
+Waiting 15 seconds to let any other sessions expire...
+Successfully reset the updates queue
+Stopped any existing polling
+⚠️ Detected another polling instance. Waiting 10 seconds before trying again...
+Sent offset request to try to clear other polling sessions
+Starting polling with conservative settings...
+✅ Started new polling session successfully
+Telegram polling error: ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+⚠️ Conflict detected in running bot - will attempt to reset the connection
+Stopped our current polling
+Waiting 15 seconds to let any other sessions expire...
+Successfully reset the updates queue
+Stopped any existing polling
+Successfully verified we can get updates from Telegram
+Starting polling with conservative settings...
+✅ Started new polling session successfully
+Recovery tool output (stderr): ./recovery-tool: line 7: go: command not found
+
+Recovery process exited with code 127
+Error in recovery process: Error: Recovery process exited with code 127
+    at ChildProcess.<anonymous> (file:///workspace/dist/index.js:334:20)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+Executing real recovery process with options: {
+  recoveryCode: 'LA5N...',
+  bitcoinAddress: 'bc1qts...',
+  feeLevel: 'low'
+}
+Starting real recovery process with Muun recovery tool...
+Now using recovery tool at /workspace/recovery-master/recovery-tool
