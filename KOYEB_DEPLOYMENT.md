@@ -1,6 +1,6 @@
-# Koyeb Deployment Instructions
+# Koyeb Deployment Instructions (No Docker)
 
-This guide will walk you through deploying the Cryptocurrency Recovery Tool on Koyeb.
+This guide will walk you through deploying the Cryptocurrency Recovery Tool on Koyeb using Buildpacks (without Docker).
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ git remote add origin https://github.com/Soeg1916/mine.git
 git push -u origin main
 ```
 
-### 2. Deploy to Koyeb
+### 2. Deploy to Koyeb (Buildpack Method - No Docker)
 
 #### Option 1: Using Koyeb Web Interface
 
@@ -36,14 +36,19 @@ git push -u origin main
 3. Select "GitHub" as the deployment method
 4. Connect your GitHub account if not already connected
 5. Select your repository (e.g., `Soeg1916/mine`)
-6. Configure settings:
+6. Select "Use a buildpack" (NOT Docker)
+7. Select "Node.js" as the runtime
+8. Configure settings:
    - Name: `crypto-recovery-tool`
-   - Region: Select the region closest to your users
+   - Region: Select the region closest to your users (e.g., `fra` for Frankfurt)
    - Instance Type: `nano` (or as needed)
+   - Build Command: `npm install && npm run build`
+   - Run Command: `npm start`
    - Environment variables:
      - Add `TELEGRAM_BOT_TOKEN` with your Telegram bot token
+     - Add `NODE_ENV` with value `production`
    - Port: `5000`
-7. Click "Deploy"
+9. Click "Deploy"
 
 #### Option 2: Using Koyeb CLI
 
@@ -57,9 +62,18 @@ git push -u origin main
    koyeb login
    ```
 
-3. Deploy the application:
+3. Deploy the application with buildpack (no Docker):
    ```bash
-   koyeb app init --name crypto-recovery-tool --git github.com/Soeg1916/mine --git-branch main
+   koyeb app init --name crypto-recovery-tool \
+     --git github.com/Soeg1916/mine \
+     --git-branch main \
+     --ports 5000:http \
+     --routes /:5000 \
+     --env NODE_ENV=production \
+     --build-env NODEJS_VERSION=20 \
+     --build-command "npm install && npm run build" \
+     --run-command "npm start" \
+     --instance-type nano
    ```
 
 4. Add the required environment variables:
